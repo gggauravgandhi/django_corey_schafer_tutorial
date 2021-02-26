@@ -1,0 +1,29 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="container" id="blogHome">
+
+  <div class="row" id="header">
+    <h2>Blogs</h2>
+  </div>
+
+
+  <div class="row row-cols-1 g-2" id="posts">
+    {% for post in posts %}
+    <div class="col">
+      <div class="card">
+        <h5 class="card-header">{{post.title}}</h5>
+        <div class="card-body">
+          <p class="card-text">{{post.content}}</p>
+        </div>
+        <div class="card-footer text-muted">
+          By <b>{{post.author}}</b> on {{post.date_posted}}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock content %}
