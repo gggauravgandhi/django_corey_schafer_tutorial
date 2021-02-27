@@ -17,7 +17,10 @@
           <p class="card-text">{{post.content}}</p>
         </div>
         <div class="card-footer text-muted">
-          By <b>{{post.author}}</b> on {{post.date_posted}}
+          <span class="float-start">
+            <a href="#" class="link-secondary text-decoration-none">{{post.author.username}}</a>
+          </span>
+          <span class="float-end">{{post.date_posted}}</span>
         </div>
       </div>
     </div>
